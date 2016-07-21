@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+  <title>{{tittle}}</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/customize.css' %}">
+</head>
+<body>
+ <div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">假花馆</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">作品集 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">书籍</a></li>
+            <li><a href="#">电影</a></li>
+            <li><a href="#">音乐</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-expanded="false">世界史 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">中国史</a></li>
+            <li><a href="#">欧洲史</a></li>
+            <li><a href="#">美国史</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--<form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>-->
+    </div>
+  </div>
+</div>
+    <!-- Header -->
+    <div class="intro-header">
+      <div class="intro-cover">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>假花馆</h1>
+                        <p>它们好似孤独者，它们不像由于某种弱点而遁世的隐士，而像一些伟大而落落寡合的人物。</p>
+                        
+                        <a href="#" class="btn white-button page-scroll">寻找</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+      </div>
+    </div>
+    <!-- /.intro-header -->
+
+<div class="footer-parlex">
+  <div class="parlex9-back">
+    <div class="container">
+      <div class="wrap">
+        <div class="footer-text">
+          <p>©2016 TIANKAI XIE. ALL RIGHTS RESERVED </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

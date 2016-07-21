@@ -1,0 +1,55 @@
+.main-container{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.intro-header{
+	padding-top: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/tbg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.intro-cover{
+	padding-bottom: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.white-button{
+	color: #ffffff;
+	background-color: transparent;
+    border-color: #fff;
+}
+
+.footer-parlex {
+    /* background-image: url('../images/fotterback.png'); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center bottom;
+}
+.parlex9-back {
+    background-color: rgba(0, 0, 0, 0.89);
+}
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+.wrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+    border-bottom: 0px none black;
+    color: #333;
+}
+
+.footer-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff7f7;
+    text-align: center;
+}
