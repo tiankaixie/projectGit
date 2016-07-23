@@ -2,16 +2,17 @@ from django.shortcuts import render,get_list_or_404,get_object_or_404
 #from django.template import loader, Context
 #from django.http import HttpResponse
 from website.models import HistoryPeriod, History
-#from django.core import serializers
+from django.core import serializers
 from django.views.decorators.cache import cache_page
 import json
 # Create your views here.
 #@cache_page(60 * 15)
 def index(request):
 	if not 'historycategory' in request.session:
-		temp = get_list_or_404(History)
-		print(temp)
-		historycategorytemp = json.dumps(temp)
+		#temp = list(get_list_or_404(History))
+		#print(temp)
+		historycategorytemp = serializers.serialize("json", History.objects.all())
+		#json.dumps(temp)
 		request.session["historycategory"] = historycategorytemp
 	historycategory =json.loads(request.session["historycategory"])
 	return render(request,'index.html',{"tittle": "HOME","historycategory":historycategory})
