@@ -45,4 +45,6 @@ def particularPeriod(request,period_id):
 		request.session["historycategory"] = historycategorytemp
 	historycategory =json.loads(request.session["historycategory"])
 	period = get_object_or_404(HistoryPeriod,pk = period_id)
-	return render(request,'particularPeriod.html',{"tittle": period.name,"particularPeriod":period,"historycategory":historycategory})
+	events = period.events.all()
+	print(period.events)
+	return render(request,'particularPeriod.html',{"tittle": period.name,"particularPeriod":period,"historycategory":historycategory,"events":events})

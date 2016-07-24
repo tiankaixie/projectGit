@@ -9,7 +9,13 @@
 {% block head_css %}
 {% endblock %}
 {% block head_js %}
+  <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript">
+  alert('wocao');
+    $('.dropdown-toggle').dropdown();
 
+  </script>
 {% endblock %}
 
 </head>
@@ -45,7 +51,7 @@
           <ul class="dropdown-menu" role="menu">
           
           {% for history in historycategory %}
-            <li><a href="{% url 'particularHistory'  history.pk %}">{{history.fields.name}}</a></li>
+            <li><a href="{% url 'particularHistory' history.pk %}">{{history.fields.name}}</a></li>
           {% endfor %}
           </ul>
         </li>
@@ -79,8 +85,7 @@
 {% endblock %}
 
 {% block footer_js %}
-  <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
 {% endblock %}
 </body>
 </html>

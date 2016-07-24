@@ -25,7 +25,7 @@
           {% for period in periods %}
             <div class="col-xs-6 col-lg-4 ">
               <h4>{{period.name}}</h4>
-              <div class="dot-ellipsis dot-height-350">
+              <div class="dot-ellipsis dot-height-150">
               <p>{{period.summary}}</p>
               </div>
               <p><a class="btn btn-default" href="{% url 'particularPeriod' period.id %}" role="button">进入 &raquo;</a></p>
@@ -56,4 +56,5 @@
 {% block footer_js %}
   <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
   <script src="{% static 'js/jquery.dotdotdot.min.js' %}"></script>
+  <script src="{% static 'js/dropdown.js' %}"></script>
 {% endblock %}
