@@ -36,12 +36,16 @@
             <hr>
           </div><!-- /.blog-post -->
 
-          <!--<nav>
+          <nav>
             <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
+            {% if particularPeriod.id != begin %}
+              <li><a href="{% url 'particularPeriod' begin %}">Previous</a></li>
+            {% endif %}
+            {% if particularPeriod.id != end %}
+              <li><a href="{% url 'particularPeriod' end %}">Next</a></li>
+            {% endif %}
             </ul>
-          </nav>-->
+          </nav>
 
         </div><!-- /.blog-main -->
 

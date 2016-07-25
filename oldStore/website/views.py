@@ -5,6 +5,7 @@ from website.models import HistoryPeriod, History
 from django.core import serializers
 from django.views.decorators.cache import cache_page
 import json
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 #@cache_page(60 * 15)
 def index(request):
@@ -51,13 +52,21 @@ def particularPeriod(request,period_id):
 	period = get_object_or_404(HistoryPeriod,pk = period_id)
 	events = period.events.all()
 	history = get_object_or_404(History,pk = period.belongTo_id)
-	periods = history.periods.all()
-	print(periods)
-	#print(period.events)
+	periods = list(history.periods.all())
+	if int(period_id) - 1 >=periods[0].id:
+		begin = int(period_id) - 1
+	else:
+		begin = period_id
+	if int(period_id) + 1 <=periods[-1].id:
+		end = int(period_id) +1
+	else:
+		end = period_id
 	return render(request,'particularPeriod.html',
 		{"tittle": period.name,
 		"particularPeriod":period,
 		"historycategory":historycategory,
 		"events":events,
-		"periods":periods
+		"periods":periods,
+		"begin":begin,
+		"end":end
 		})
